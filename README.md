@@ -4,8 +4,6 @@
 - [Overview](#Overview)
   - [Core Features](#Core-Features)
   - [Goals](#Goals)
-  - [Team](#Team)
-  - [Permissions](#Permissions)
 - [MVP](#MVP)
   - [Client (Front End)](#Client-Front-End)
     - [Wireframes](#Wireframes)
@@ -15,11 +13,9 @@
   - [Server (Back End)](#Server-Back-End)
     - [ERD Model](#ERD-Model)
     - [Data Heirarchy](#Data-Heirarchy)
-    - [Data Heirarchy](#Data-Heirarchy-1)
   - [Dependencies](#Dependencies)
 - [Post-MVP](#Post-MVP)
-- [Code Showcase](#Code-Showcase)
-- [Code Issues & Resolutions](#Code-Issues--Resolutions)
+
 
 <br>
 
@@ -45,14 +41,6 @@ _Lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. I
 - _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
 - _etc._
 
-### Team
-
-Created, designed, and developed by [James Madison](https://github.com/mishakessler) for the General Assembly Software Engineering Immersive (November '19 Cohort) Unit 4 Project.
-
-### Permissions
-
-Digital assets used with full licensing and permission from [Death to Stock Photo](), [Freepik](), and [Unsplash](). Custom digital design and branding by John Lansing. Digital assets stored locally and on [Imgur]().
-
 <br>
 
 ## MVP
@@ -66,23 +54,23 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 #### Wireframes
 
 
-<img src="./models/desktop-landing.png" align="center" height="auto" width="600" >
+<img src="./models/desktop-landing.png" height="auto" width="600" >
 
 - Desktop Landing
 
-<img src="./models/desktop-add.png" align="center" height="auto" width="600" >
+<img src="./models/desktop-add.png" height="auto" width="600" >
 
 - Desktop Add A Restaurant
 
-<img src="./models/desktop-rand.png" align="center" height="auto" width="600" >
+<img src="./models/desktop-rand.png" height="auto" width="600" >
 
 - Desktop Randomizer
 
-<img src="./models/mobile-add.png" align="center" height="auto" width="600" >
+<img src="./models/mobile-add.png" height="auto" width="600" >
 
 - Mobile Add A Restaurant
 
-<img src="./models/mobile-rand.png" align="center" height="auto" width="600" >
+<img src="./models/mobile-rand.png" height="auto" width="600" >
 
 - Mobile Randomizer
 
@@ -135,7 +123,7 @@ src
 
 #### ERD Model
 
-<img src="./models/erd.png" align="center" height="auto" width="600" >
+<img src="./models/erd.png" height="auto" width="600" >
 
 #### Data Heirarchy
 
@@ -145,14 +133,10 @@ src
 
 database_db
 |__ users/
-|__ resources/
-|__ posts/
+|__ categories/
+|__ restaurants/
 
 ```
-
-#### Data Heirarchy
-
-> Use this section to display the expected endpoints from your API.
 
 <br>
 
@@ -162,17 +146,11 @@ database_db
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | _This is used to build out the UI._        |  
+|   Ruby on Rails   | _This is used to create the database._    |
+
 
 <br> 
-
-***
-
-> This section is not necessary for your pitch!
 
 ## Post-MVP
 
