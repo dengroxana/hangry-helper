@@ -65,31 +65,27 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views.
 
-![Dummy Link](url)
+<img src="./models/desktop-landing.png" align="center" height="auto" width="600" >
 
 - Desktop Landing
 
-![Dummy Link](url)
+<img src="./models/desktop-add.png" align="center" height="auto" width="600" >
 
-- Desktop Hero
+- Desktop Add A Restaurant
 
-![Dummy Link](url)
+<img src="./models/desktop-rand.png" align="center" height="auto" width="600" >
 
-- Resource Index
+- Desktop Randomizer
 
-![Dummy Link](url)
+<img src="./models/mobile-add.png" align="center" height="auto" width="600" >
 
-- Resource Show
+- Mobile Add A Restaurant
 
-![Dummy Link](url)
+<img src="./models/mobile-rand.png" align="center" height="auto" width="600" >
 
-- Tablet Resource Index
+- Mobile Randomizer
 
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 #### Component Hierarchy
 
@@ -139,7 +135,7 @@ src
 
 #### ERD Model
 
-<img src="../models/erd.png" align="center" height="auto" width="600" >
+<img src="./models/erd.png" align="center" height="auto" width="600" >
 
 #### Data Heirarchy
 
