@@ -139,7 +139,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model.
+<img src="../models/erd.png" align="center" height="auto" width="600" >
 
 #### Data Heirarchy
 
