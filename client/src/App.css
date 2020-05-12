@@ -1,3 +1,13 @@
 * {
     text-align: center;
+    margin:0;
 }
+
+footer {
+   margin-top: 100%;
+   padding-top: 20px;
+    border-top: 1px solid black;
+    height: 50px;
+    
+}
+

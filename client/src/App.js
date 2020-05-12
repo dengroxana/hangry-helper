@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router';
 import './App.css'
-
+import Landing from "./components/Landing"
+import Footer from "./components/Footer"
 import Header from './components/Header';
 import Main from './components/Main';
 import {
@@ -45,16 +46,20 @@ class App extends Component {
   }
 
   render() {
+    this.state.currentUser = null ? <Landing/> : <Main/>
     return (
       <div className="App">
         <Header
           handleLogout={this.handleLogout}
           currentUser={this.state.currentUser}
         />
+        
         <Main
           handleRegister={this.handleRegister}
           handleLogin={this.handleLogin}
         />
+        {/* <Landing/> */}
+        <Footer/>
       </div>
     )
   }
