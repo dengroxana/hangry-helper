@@ -3,6 +3,8 @@ import Rand from "./GenerateRand";
 import Login from './Login';
 import Register from "./Register"
 import { Route } from "react-router-dom";
+import AllCategories from "./AllCategories";
+
 
 class Main extends Component {
   render() {
@@ -20,6 +22,9 @@ class Main extends Component {
             handleRegister={this.props.handleRegister}
           />
         )} />
+           <Route
+          path="/all"
+          render={() => <AllCategories/>}/>
         <Route path="/generate" render={() => <Rand />} />
       </>
     );

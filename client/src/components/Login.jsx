@@ -1,31 +1,33 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
-import "./Login.css"
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "./Login.css";
 
 export default class Login extends Component {
   state = {
-    username: '',
-    email: '',
-    password: ''
-  }
+    username: "",
+    email: "",
+    password: "",
+  };
 
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
-      [name]: value
+      [name]: value,
     });
-  }
+  };
 
   render() {
-    const { username, email, password } = this.state;
+    const { email, password } = this.state;
     return (
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        this.props.handleLogin(this.state);
-        this.props.history.push('/');
-      }}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          this.props.handleLogin(this.state);
+          this.props.history.push("/all");
+        }}
+      >
         <h3>Login</h3>
-       
+
         <label htmlFor="email">Email:</label>
         <input
           id="email"
@@ -45,9 +47,9 @@ export default class Login extends Component {
         />
         <br />
         <button>Submit</button>
-        <br/>
-        <Link to='/register'>Register</Link>
+        <br />
+        <Link to="/register">Register</Link>
       </form>
-    )
+    );
   }
 }
