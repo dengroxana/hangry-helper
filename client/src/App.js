@@ -1,32 +1,63 @@
-import React, { Component } from "react";
-// import { Route } from 'react-router-dom';
-import { getAllCategories } from "./services/api-helper";
-import "./App.css";
+import React, { Component } from 'react'
+import { withRouter } from 'react-router';
+import './App.css'
 
-export default class App extends Component {
-  constructor(props){
-    super(props)
-  this.state = {
-    categories: []
+import Header from './components/Header';
+import Main from './components/Main';
+import {
+  loginUser,
+  registerUser,
+  verifyUser,
+  removeToken
+} from './services/api-helper';
+
+class App extends Component {
+  state = {
+    currentUser: null
   }
-  };
 
   componentDidMount() {
-    this.readAllCategories();
+    this.confirmUser();
   }
-  readAllCategories = async () => {
-    const categories = await getAllCategories();
-    this.setState({ categories });
-  };
+
+  handleLogin = async (loginData) => {
+    const currentUser = await loginUser(loginData);
+    this.setState({ currentUser })
+  }
+
+  handleRegister = async (registerData) => {
+    const currentUser = await registerUser(registerData);
+    this.setState({ currentUser })
+  }
+
+  confirmUser = async () => {
+    const currentUser = await verifyUser();
+    this.setState({ currentUser })
+  }
+
+  handleLogout = () => {
+    localStorage.clear();
+    this.setState({
+      currentUser: null
+    })
+    removeToken();
+    this.props.history.push('/');
+  }
 
   render() {
     return (
       <div className="App">
-        <h3>Categories</h3>
-        {this.state.categories.map(category => (
-        <p key={category.id}>{category.category_name}</p>
-      ))}
+        <Header
+          handleLogout={this.handleLogout}
+          currentUser={this.state.currentUser}
+        />
+        <Main
+          handleRegister={this.handleRegister}
+          handleLogin={this.handleLogin}
+        />
       </div>
-    );
+    )
   }
 }
+
+export default withRouter(App);

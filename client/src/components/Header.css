@@ -1,0 +1,15 @@
+.header {
+    padding: 0 75px;
+   background-color: pink;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+   
+}
+
+img {
+    width: 200px;
+    height: auto;
+}
