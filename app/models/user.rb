@@ -6,4 +6,13 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }
 
   has_many :restaurants, dependent: :destroy
+
+  def return_data
+    {
+      id: id,
+      email: email,
+      created_at: created_at,
+      updated_at: updated_at
+    }
+  end
 end

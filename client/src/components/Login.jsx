@@ -4,20 +4,21 @@ import "./Login.css";
 
 export default class Login extends Component {
   state = {
-    username: "",
+    
     email: "",
     password: "",
   };
 
   handleChange = (e) => {
-    const { name, value } = e.target;
+    const { email, value } = e.target;
     this.setState({
-      [name]: value,
+      [email]: value,
     });
   };
 
   render() {
     const { email, password } = this.state;
+    
     return (
       <form
         onSubmit={(e) => {

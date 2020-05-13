@@ -42,3 +42,8 @@ export const getAllCategories = async () => {
   const resp = await api.get('/categories');
   return resp.data;
 }
+
+export const getAllRestaurants = async () => {
+  const resp = await api.get('/restaurants');
+  return resp.data;
+}

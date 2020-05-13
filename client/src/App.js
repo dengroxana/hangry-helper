@@ -46,7 +46,8 @@ class App extends Component {
   }
 
   render() {
-    this.state.currentUser = null ? <Landing/> : <Main/>
+    
+    
     return (
       <div className="App">
         <Header

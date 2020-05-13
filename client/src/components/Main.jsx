@@ -26,6 +26,7 @@ class Main extends Component {
           path="/all"
           render={() => <AllCategories/>}/>
         <Route path="/generate" render={() => <Rand />} />
+        
       </>
     );
   }
