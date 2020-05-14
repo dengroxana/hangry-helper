@@ -34,9 +34,8 @@ class AllRestaurants extends Component {
   <React.Fragment key={restaurant.id}>
     <p>
     <Link to={`/restaurants/${restaurant.restaurant_name}`}>{restaurant.restaurant_name}</Link></p>
-    <button onClick={() => {
-      this.state.history.push(`/restaurants/${restaurant.restaurant_name}/edit`);
-    }}>Edit</button>
+   
+    <Link to={`/restaurants/${restaurant.restaurant_name}/edit`}> <button>Edit</button></Link>
     <button onClick={() => {
       this.state.handleResDelete(restaurant.id);
     }}>Delete</button>

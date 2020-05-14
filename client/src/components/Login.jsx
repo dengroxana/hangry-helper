@@ -9,7 +9,7 @@ export default class Login extends Component {
       email: "",
       password: "",
     };
-    this.handleChange = this.handleChange.bind(this);
+    
   }
   handleChange = (e) => {
 

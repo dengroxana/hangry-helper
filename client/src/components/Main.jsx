@@ -88,6 +88,7 @@ export default class Main extends Component {
           <CreateRes
             {...props}
             handleResSubmit={this.handleResSubmit}
+            currentUser={this.props.currentUser}
           />
         )} />
         <Route path='/restaurants/:id/edit' render={(props) => {

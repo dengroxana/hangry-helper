@@ -1,10 +1,10 @@
 class AuthenticationController < ApplicationController
-  # before_action :authorize_request, except: :login
+  before_action :authorize_request, except: :login
 
   # POST /auth/login
   def login
-    @user = User.find_by(email: params[:login][:email])
-    if @user.authenticate(params[:login][:password]) #authenticate method provided by Bcrypt and 'has_secure_password'
+    @user = User.find_by_email(login_params[:email])
+    if @user.authenticate(login_params[:password]) #authenticate method provided by Bcrypt and 'has_secure_password'
       token = encode(user_id: @user.id, email: @user.email)
       render json: { user: @user, token: token }, status: :ok
     else
