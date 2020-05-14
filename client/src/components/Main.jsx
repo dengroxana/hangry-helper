@@ -10,7 +10,7 @@ class Main extends Component {
   render() {
     return (
       <>
-      <Route path='/auth/login' render={(props) => (
+      <Route path='/login' render={(props) => (
           <Login
             {...props}
             handleLogin={this.props.handleLogin}

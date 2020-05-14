@@ -3,30 +3,33 @@ import { Link } from "react-router-dom";
 import "./Login.css";
 
 export default class Login extends Component {
-  state = {
-    
-    email: "",
-    password: "",
-  };
-
+  constructor() {
+    super();
+    this.state = {
+      email: "",
+      password: "",
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
   handleChange = (e) => {
-    const { email, value } = e.target;
+
+    const { name, value } = e.target;
     this.setState({
-      [email]: value,
+      [name]: value,
     });
   };
 
   render() {
-    const { email, password } = this.state;
-    
+
     return (
       <form
         onSubmit={(e) => {
           e.preventDefault();
           this.props.handleLogin(this.state);
-          this.props.history.push("/all");
+          this.props.history.push("/");
         }}
       >
+     
         <h3>Login</h3>
 
         <label htmlFor="email">Email:</label>
@@ -34,7 +37,7 @@ export default class Login extends Component {
           id="email"
           type="text"
           name="email"
-          value={email}
+          value={this.state.email}
           onChange={this.handleChange}
         />
         <br />
@@ -43,7 +46,7 @@ export default class Login extends Component {
           id="password"
           type="password"
           name="password"
-          value={password}
+          value={this.state.password}
           onChange={this.handleChange}
         />
         <br />

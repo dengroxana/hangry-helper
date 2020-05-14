@@ -9,7 +9,7 @@ class Header extends Component {
       <div className="header">
         <h3>Hangry Helper</h3>
         <img src="#"alt=""/>
-        <Link to="/auth/login">Login - Register</Link>
+        <Link to="/login">Login - Register</Link>
         <Link to="/generate">Generate</Link>
         <Link to="/all">Show All</Link>
       </div>
