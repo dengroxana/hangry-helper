@@ -38,23 +38,23 @@ _The **Hangry Helper** MVP will be a functional CRUD web application. Users will
 #### Wireframes
 
 
-<img src="./models/desktop-landing.png" height="auto" width="600" >
+<img src="./wireframes/desktop-landing.png" height="auto" width="600" >
 
 - Desktop Landing
 
-<img src="./models/desktop-add.png" height="auto" width="600" >
+<img src="./wireframes/desktop-add.png" height="auto" width="600" >
 
 - Desktop Add A Restaurant
 
-<img src="./models/desktop-rand.png" height="auto" width="600" >
+<img src="./wireframes/desktop-rand.png" height="auto" width="600" >
 
 - Desktop Randomizer
 
-<img src="./models/mobile-add.png" height="auto" width="600" >
+<img src="./wireframes/mobile-add.png" height="auto" width="600" >
 
 - Mobile Add A Restaurant
 
-<img src="./models/mobile-rand.png" height="auto" width="600" >
+<img src="./wireframes/mobile-rand.png" height="auto" width="600" >
 
 - Mobile Randomizer
 
@@ -85,7 +85,7 @@ src
 
 #### ERD Model
 
-<img src="./models/erd.png" height="auto" width="600" >
+<img src="./wireframes/erd.png" height="auto" width="600" >
 
 #### Data Heirarchy
 
