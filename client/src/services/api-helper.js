@@ -47,3 +47,29 @@ export const getAllRestaurants = async () => {
   const resp = await api.get('/restaurants');
   return resp.data;
 }
+
+
+export const getOneRestaurant = async (id) => {
+  const resp = await api.get(`/restaurants/${id}`);
+  return resp.data;
+}
+
+export const postRestaurant = async (ResData) => {
+  const resp = await api.post('/restaurants', ResData);
+  return resp.data;
+}
+
+export const putRestaurant = async (id, ResData) => {
+  const resp = await api.put(`/restaurants/${id}`, ResData);
+  return resp.data;
+}
+
+export const destroyRestaurant = async (id) => {
+  const resp = await api.delete(`/restaurants/${id}`);
+  return resp;
+}
+
+export const addCategory = async (catId, resId) => {
+  const resp = await api.get(`/categories/${catId}/restaurants/${resId}`)
+  return resp.data;
+}

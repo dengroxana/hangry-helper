@@ -1,30 +1,17 @@
 import React from 'react';
 import { Component } from 'react';
+import {Link} from "react-router-dom";
 import {
-    // getAllCategories,
     getAllRestaurants,
-    // postFood,
-    // putFood,
-    // destroyFood,
+ 
   } from "../services/api-helper";
-
-// function AllRestaurants(props) {
-// return (
-//     <div>
-//       <h3>Restaurants</h3>
-//       {props.restaurant.map(restaurant => (
-//         <p key={restaurant.id}>{restaurant.restaurant_name}</p>
-//       ))}
-//       </div>
-// )
-// }
 
 class AllRestaurants extends Component {
     state = {
         restaurants: []
     }
     componentDidMount() {
-        // this.readAllCategories();
+     
         this.readAllRestaurants();
       }
       readAllRestaurants = async () => {
@@ -35,12 +22,32 @@ class AllRestaurants extends Component {
     render() {
         return(
             <div>
- <h3>Restaurants</h3>
+ {/* <h3>Restaurants</h3>
        {this.state.restaurants.map(restaurant => (
         <p key={restaurant.id}>{restaurant.restaurant_name}</p>
       ))}
-            </div>
+      <Link to="/restaurants/:id/edit">Edit</Link>
+            </div> */}
+<h3>Restaurants</h3>
+<div className="food-list">
+{this.state.restaurants.map(restaurant => (
+  <React.Fragment key={restaurant.id}>
+    <p>
+    <Link to={`/restaurants/${restaurant.restaurant_name}`}>{restaurant.restaurant_name}</Link></p>
+    <button onClick={() => {
+      this.state.history.push(`/restaurants/${restaurant.restaurant_name}/edit`);
+    }}>Edit</button>
+    <button onClick={() => {
+      this.state.handleResDelete(restaurant.id);
+    }}>Delete</button>
+    
+  </React.Fragment>
+))}
+<Link to="/new/restaurants"><button>Create</button></Link>
+</div>
+</div>
         )
+        
     }
 }
 

@@ -10,8 +10,8 @@ class Header extends Component {
         <h3>Hangry Helper</h3>
         <img src="#"alt=""/>
         <Link to="/login">Login - Register</Link>
-        <Link to="/generate">Generate</Link>
-        <Link to="/all">Show All</Link>
+        
+        <Link to="/categories">Show All</Link>
       </div>
     );
   }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router';
 import './App.css'
-import Landing from "./components/Landing"
 import Footer from "./components/Footer"
 import Header from './components/Header';
 import Main from './components/Main';
@@ -59,7 +58,7 @@ class App extends Component {
           handleRegister={this.handleRegister}
           handleLogin={this.handleLogin}
         />
-        {/* <Landing/> */}
+     
         <Footer/>
       </div>
     )
