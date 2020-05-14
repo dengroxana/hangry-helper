@@ -5,6 +5,7 @@ import {
   // getAllRestaurants,
   
 } from "../services/api-helper";
+import "../App.css"
 import AllRestaurants from "./AllRestaurants";
 
 class AllCategories extends Component {
@@ -28,32 +29,38 @@ class AllCategories extends Component {
     if (this.state.showAll) {
     return (
       <div>
+      <div className="showCat">
   
         <br />
-      
+     
         {this.state.categories.map((category) => (
 
-          <h3 key={category.id}>
+          <h3 className="catTitle"key={category.id}>
             {category.category_name}
           </h3>
         ))}
+      
+   </div>
         <button onClick={this.categoryHandler} >Show Less</button>
 {this.state.showAll ? <AllRestaurants /> : null}
 <br/>
           <Link to="/new/restaurants">Add Restaurant</Link>
      
-   
       </div>
     );
       }
       else {
         return (
           <div>
+          <div className="showCat">
+           
             {this.state.categories.map((category) => (
-          <h3 key={category.id}>
+          <h3 className="catTitle"key={category.id}>
             {category.category_name}
           </h3>
         ))}
+        
+        </div>
         <button onClick={this.categoryHandler} >Show More</button>
 {this.state.showAll ? <AllRestaurants /> : null}
           <br/>

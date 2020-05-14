@@ -7,7 +7,7 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <h3>Hangry Helper</h3>
+       <Link to="/"><h3>Hangry Helper</h3></Link>
         <img src="#"alt=""/>
         <Link to="/login">Login - Register</Link>
         
