@@ -25,6 +25,7 @@ export default class CreateRes extends Component {
      
       new_res: {
         ...this.state.new_res,
+        user_id: this.props.currentUser.id,
         [name]: value
         
       },
@@ -44,10 +45,10 @@ this.setState({
     return (
       <>
         <form
-          onSubmit={(e) => {
+          onSubmit={(e) => {        
             e.preventDefault();
             this.props.handleResSubmit(this.state.new_res);
-            this.props.history.push("/restaurants");
+            this.props.history.push("/categories");
           }}
         >
         <select onChange={this.handleSelect} name="category_id" value={this.state.new_res.category_id}>

@@ -72,8 +72,10 @@ export default class Main extends Component {
             handleRegister={this.props.handleRegister}
           />
         )} />
-        <Route path='/categories' render={() => (
+        <Route path='/categories' render={(props) => (
           <AllCategories
+          {...props}
+          handleResDelete={this.handleResDelete}
             categories={this.state.categories}
           />
         )} />

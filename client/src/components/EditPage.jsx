@@ -25,10 +25,10 @@ export default class EditPage extends Component {
   }
 
   setFormData = async () => {
-    // const { name } = this.props.restaurants.find(restaurant => {
-    //   return restaurant.id === parseInt(this.props.id)
-    // });
-    // this.setState({ name });
+    const { name } = this.props.restaurants.find(restaurant => {
+      return restaurant.id === parseInt(this.props.id)
+    });
+    this.setState({ name });
   }
 
   render() {
@@ -40,6 +40,7 @@ export default class EditPage extends Component {
       }}>
         <h3>Update Food</h3>
         <input
+        name="restaurant_name"
           type="text"
           value={this.state.name}
           onChange={this.handleChange}
