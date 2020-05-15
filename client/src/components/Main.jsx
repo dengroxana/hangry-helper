@@ -93,7 +93,7 @@ export default class Main extends Component {
             currentUser={this.props.currentUser}
           />
         )} />
-        <Route path='/restaurants/:id/edit' render={(props) => {
+        <Route path='/restaurants/:id' render={(props) => {
           const { id } = props.match.params;
           return <EditPage
             {...props}
@@ -103,14 +103,14 @@ export default class Main extends Component {
 
           />
         }} />
-        <Route exact path='/restuarants/:id' render={(props) => {
+        {/* <Route exact path='/restuarants/:id' render={(props) => {
           const { id } = props.match.params
           return <SingleRes
             id={id}
             categories={this.state.categories}
           />
         }
-        } />
+        } /> */}
       </main>
     )
   }

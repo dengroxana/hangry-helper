@@ -29,15 +29,15 @@ class AllRestaurants extends Component {
   <React.Fragment key={restaurant.id}>
     <p>
     <Link to={`/restaurants/${restaurant.restaurant_name}`}>{restaurant.restaurant_name}</Link></p>
+<p>{restaurant.location}</p>
    
-    <Link to={`/restaurants/${restaurant.restaurant_name}/edit`}> <button>Edit</button></Link>
+    <Link to={`/restaurants/${restaurant.id}/`}> <button>Edit</button></Link>
     <button onClick={() => {
       this.props.handleResDelete(restaurant.id);
     }}>Delete</button>
     
   </React.Fragment>
 ))}
-{/* <Link to="/new/restaurants"><button>Create</button></Link> */}
 </div>
 </div>
         )
