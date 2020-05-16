@@ -1,5 +1,6 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /restaurants
   def index

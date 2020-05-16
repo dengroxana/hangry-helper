@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :restaurants
+  post '/restaurants', to: 'restaurants#create'
   resources :categories, only: :index
   get '/categories', to: 'categories#index'
   post "/auth/login", to: "authentication#login"

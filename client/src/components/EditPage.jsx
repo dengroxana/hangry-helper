@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 
 export default class EditPage extends Component {
   state = {
-    name: ""
+    restaurant_name: ""
   }
 
   handleChange = (e) => {
-    const { value } = e.target;
+    const { name, value } = e.target;
     this.setState({
-      name: value
+      [name]: value
     })
   }
 
@@ -25,25 +25,36 @@ export default class EditPage extends Component {
   }
 
   setFormData = async () => {
-    // const { name } = this.props.restaurants.find(restaurant => {
-    //   return restaurant.id === parseInt(this.props.id)
-    // });
-    // this.setState({ name });
+    const { name } = this.props.restaurants.find(restaurant => {
+      return restaurant.id === parseInt(this.props.id)
+    });
+    this.setState({ restaurant_name: name });
   }
 
   render() {
+  
     return (
       <form onSubmit={(e) => {
         e.preventDefault();
-        this.props.handleResUpdate(this.props.resId, this.state);
+        this.props.handleResUpdate(this.props.id, this.state);
         this.props.history.push('/restaurants');
       }}>
         <h3>Update Food</h3>
+        <p>Name:</p>
         <input
+        name="restaurant_name"
           type="text"
-          value={this.state.name}
+          value={this.state.restaurant_name}
           onChange={this.handleChange}
         />
+        <br/>
+        <p>Location:</p>
+        <input
+        name="location"
+          type="text"
+          value={this.state.location}
+          onChange={this.handleChange}
+        /><br/>
         <button>Submit</button>
 
       </form>

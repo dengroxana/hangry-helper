@@ -19,30 +19,25 @@ class AllRestaurants extends Component {
         this.setState({ restaurants });
       };
 
+
     render() {
         return(
             <div>
- {/* <h3>Restaurants</h3>
-       {this.state.restaurants.map(restaurant => (
-        <p key={restaurant.id}>{restaurant.restaurant_name}</p>
-      ))}
-      <Link to="/restaurants/:id/edit">Edit</Link>
-            </div> */}
 <h3>Restaurants</h3>
 <div className="food-list">
 {this.state.restaurants.map(restaurant => (
   <React.Fragment key={restaurant.id}>
     <p>
     <Link to={`/restaurants/${restaurant.restaurant_name}`}>{restaurant.restaurant_name}</Link></p>
+<p>{restaurant.location}</p>
    
-    <Link to={`/restaurants/${restaurant.restaurant_name}/edit`}> <button>Edit</button></Link>
+    <Link to={`/restaurants/${restaurant.id}/`}> <button>Edit</button></Link>
     <button onClick={() => {
-      this.state.handleResDelete(restaurant.id);
+      this.props.handleResDelete(restaurant.id);
     }}>Delete</button>
     
   </React.Fragment>
 ))}
-<Link to="/new/restaurants"><button>Create</button></Link>
 </div>
 </div>
         )
