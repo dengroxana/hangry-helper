@@ -30,6 +30,7 @@ class AllRestaurants extends Component {
     <p>
     <Link to={`/restaurants/${restaurant.restaurant_name}`}>{restaurant.restaurant_name}</Link></p>
 <p>{restaurant.location}</p>
+<p>Price Range: {restaurant.price_range}</p>
    
     <Link to={`/restaurants/${restaurant.id}/`}> <button>Edit</button></Link>
     <button onClick={() => {

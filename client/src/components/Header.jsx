@@ -13,7 +13,7 @@ function Header(props) {
         <div className="auth">
           {props.currentUser ? (
             <>
-              <p>You're logged in as: {props.currentUser.email}</p>
+              <p>You're logged in as: {props.currentUser.first_name || props.currentUser.email}</p>
               <button onClick={props.handleLogout}>Logout</button>
             </>
           ) : (
