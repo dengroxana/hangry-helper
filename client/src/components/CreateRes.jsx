@@ -7,6 +7,8 @@ export default class CreateRes extends Component {
     categories: "",
     new_res: {
       restaurant_name: "",
+      price_range: "",
+      location: "",
       user_id: this.props.currentUser.id,
       category_id: "",
     },
@@ -52,20 +54,41 @@ this.setState({
             this.props.history.push("/categories");
           }}
         >
+          <h2>Add Restaurant</h2>
+          <div className="login-form">
         <select onChange={this.handleSelect} name="category_id" value={this.state.new_res.category_id}>
           <option>Select A Category</option>
           {this.state.categories && this.state.categories.map((category) => (
             <option key={category.id} value={category.id}>{category.category_name}</option>
           ))}
         </select>
-          <h2>Add Restaurant</h2>
+        <br/>
+        <p>Restaurant:</p>
           <input
             type="text"
             name="restaurant_name"
             value={this.state.new_res.restaurant_name}
             onChange={this.handleChange}
           />
+          <br/>
+          <p>Location:</p>
+          <input
+            type="text"
+            name="location"
+            value={this.state.new_res.location}
+            onChange={this.handleChange}
+          />
+          <br/>
+          <p>Price Range:</p>
+          <input
+            type="text"
+            name="price_range"
+            value={this.state.new_res.price_range}
+            onChange={this.handleChange}
+          />
+          <br/>
           <button>Submit</button>
+          </div>
         </form>
       </>
     );

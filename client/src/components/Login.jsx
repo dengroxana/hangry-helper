@@ -23,16 +23,16 @@ export default class Login extends Component {
 
     return (
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          this.props.handleLogin(this.state);
-          this.props.history.push("/");
-        }}
+      onSubmit={(e) => {
+        e.preventDefault();
+        this.props.handleLogin(this.state);
+        this.props.history.push("/");
+      }}
       >
+      <h2>Login</h2>
      
-        <h2>Login</h2>
-
-        <label htmlFor="email">Email:</label>
+<div className="login-form">
+        <div className="spacer"><label htmlFor="email">Email:</label></div>
         <input
           id="email"
           type="text"
@@ -41,7 +41,7 @@ export default class Login extends Component {
           onChange={this.handleChange}
         />
         <br />
-        <label htmlFor="password">Password:</label>
+        <div className="spacer"><label htmlFor="password">Password:</label></div>
         <input
           id="password"
           type="password"
@@ -53,6 +53,7 @@ export default class Login extends Component {
         <button>Submit</button>
         <br />
         <Link to="/register">Register</Link>
+      </div>
       </form>
     );
   }
