@@ -30,7 +30,7 @@ export default class Login extends Component {
         }}
       >
      
-        <h3>Login</h3>
+        <h2>Login</h2>
 
         <label htmlFor="email">Email:</label>
         <input

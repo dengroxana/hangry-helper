@@ -7,9 +7,13 @@ function Header(props) {
   return (
     <header>
       <div className="header">
+          <div className="logo-back">
+            <div class="text">
         <Link to="/">
-          <h3>Hangry Helper</h3>
+          <h2 className="header-logo">Hangry Helper</h2>
         </Link>
+        </div>
+        </div>
         <div className="auth">
           {props.currentUser ? (
             <>
