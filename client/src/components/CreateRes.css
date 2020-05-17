@@ -2,15 +2,43 @@ input, select {
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px 15px;
+    margin: 20px;
 }
+@keyframes expand {
 
+    0% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  input:focus{
+   
+        animation-duration: 2s;
+        animation-name: expand;
+        animation-iteration-count: infinite;
+
+  }
+label {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+    text-align: left;
+}
 select {
     margin-top: 20px;
     margin-bottom: 30px;
+    width: 300px;
+    height: 40px;
 }
 
 .add-link {
     font-weight: bold;
     font-size: 16px;
    
+}
+
+.res-list {
+    margin-top: 20px;
 }

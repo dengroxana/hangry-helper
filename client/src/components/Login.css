@@ -11,3 +11,13 @@ h3 {
     font-size: 24px;
 }
 
+.login-form {
+    border: 1px solid black;
+    width: 450px;
+    height: 475px;
+    margin: 0 auto;
+    margin-top: 40px;
+ padding-top: 40px;
+ box-shadow: 5px 5px 5px gray;
+
+}

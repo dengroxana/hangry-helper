@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 
 export default class EditPage extends Component {
   state = {
-    restaurant_name: ""
+    restaurant_name: "",
+    price_range: "",
+    location:""
   }
 
   handleChange = (e) => {
@@ -40,6 +42,7 @@ export default class EditPage extends Component {
         this.props.history.push('/restaurants');
       }}>
         <h2>Update Restaurant</h2>
+        <div className="login-form">
         <p>Name:</p>
         <input
         name="restaurant_name"
@@ -55,8 +58,16 @@ export default class EditPage extends Component {
           value={this.state.location}
           onChange={this.handleChange}
         /><br/>
+          <p>Price Range:</p>
+          <input
+            type="text"
+            name="price_range"
+            value={this.state.price_range}
+            onChange={this.handleChange}
+          />
+          <br/>
         <button>Submit</button>
-
+</div>
       </form>
     )
   }

@@ -3,7 +3,7 @@
     margin:0;
     background-color: #f6eedf;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 footer {
@@ -19,16 +19,20 @@ button {
      border: 1px solid black;
      border-radius: 5px;
      padding: 5px 15px;
+     background-color: #f57b51;
+     cursor: pointer;
 
 }
 a, a:visited, a:active {
     font-family: 'Open Sans Condensed', sans-serif;;
-    font-size: 20px;
+    font-size: 24px;
     text-decoration: none;
     color:black;
+    
 }
 a:hover {
     font-size: 25px;
+   
 }
 
 .showCat {
@@ -48,5 +52,5 @@ a:hover {
     
 }
 .catTitle:hover{
-    text-shadow:1px 1px 0 #f57b51;
+    text-shadow:1px 1px 0 gray;
 }

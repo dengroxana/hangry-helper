@@ -24,8 +24,10 @@ class Register extends Component {
           this.props.history.push("/");
         }}
       >
-        <h3>Register</h3>
+        <h2>Register</h2>
+        <div className="login-form">
         <label htmlFor="first-name">First Name:</label>
+        <br/>
         <input
           id="first-name"
           type="text"
@@ -35,6 +37,7 @@ class Register extends Component {
         />
         <br />
         <label htmlFor="first-name">Last Name:</label>
+        <br/>
         <input
           id="last-name"
           type="text"
@@ -44,6 +47,7 @@ class Register extends Component {
         />
         <br />
         <label htmlFor="email">Email:</label>
+        <br/>
         <input
           id="email"
           type="text"
@@ -53,6 +57,7 @@ class Register extends Component {
         />
         <br />
         <label htmlFor="password">Password:</label>
+        <br/>
         <input
           id="password"
           type="password"
@@ -62,6 +67,7 @@ class Register extends Component {
         />
         <br />
         <button>Submit</button>
+        </div>
       </form>
     );
   }
