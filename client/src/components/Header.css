@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
 header {
     padding: 20px 75px;
     border-bottom: 1px solid black;
     padding-bottom: 20px;
+    margin-bottom: 50px;
     
 }
 
@@ -13,4 +16,57 @@ header {
 img {
     width: 200px;
     height: auto;
+}
+
+.logo-back, .text {
+
+        position: absolute;
+        z-index: 999; 
+        left: 0;
+        right: 0;
+        top: 30%; 
+        text-align: center;
+        background-color: transparent;
+        
+}
+@keyframes bouncing {
+    from {
+        top: 0px;
+        animation-timing-function: ease-out;
+      }
+      25% {
+        top: 10px;
+        animation-timing-function: ease-in;
+      }
+      50% {
+        top: 30px;
+        animation-timing-function: ease-out;
+      }
+      75% {
+        top: 15px;
+        animation-timing-function: ease-in;
+      }
+      to {
+        top: 0px;
+      }
+   
+}
+.header-logo {
+    text-shadow: 2px 2px 5px #f6eedf;
+font-size: 60px;
+position: relative;
+left: 0;
+top: 0;
+animation-name: bouncing;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+}
+
+.logo-back {
+    position: relative;
+    display: inline-block;
+    background-image: url('../images/logo-background.png');
+    background-repeat: no-repeat;
+    height: 178px;
+    width: 499px;
 }

@@ -39,7 +39,7 @@ export default class EditPage extends Component {
         this.props.handleResUpdate(this.props.id, this.state);
         this.props.history.push('/restaurants');
       }}>
-        <h3>Update Food</h3>
+        <h2>Update Restaurant</h2>
         <p>Name:</p>
         <input
         name="restaurant_name"

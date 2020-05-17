@@ -43,8 +43,8 @@ class AllCategories extends Component {
    </div>
         <button onClick={this.categoryHandler} >Show Less</button>
 {this.state.showAll ? <AllRestaurants /> : null}
-<br/>
-          <Link to="/new/restaurants">Add Restaurant</Link>
+
+         
      
       </div>
     );
@@ -63,8 +63,7 @@ class AllCategories extends Component {
         </div>
         <button onClick={this.categoryHandler} >Show More</button>
 {this.state.showAll ? <AllRestaurants /> : null}
-          <br/>
-          <Link to="/new/restaurants">Add Restaurant</Link>
+         
           </div>
         )
       }

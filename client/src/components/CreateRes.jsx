@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getAllCategories } from "../services/api-helper";
+import "./CreateRes.css"
 
 export default class CreateRes extends Component {
   state = {
@@ -57,7 +58,7 @@ this.setState({
             <option key={category.id} value={category.id}>{category.category_name}</option>
           ))}
         </select>
-          <h3>Add Restaurant</h3>
+          <h2>Add Restaurant</h2>
           <input
             type="text"
             name="restaurant_name"

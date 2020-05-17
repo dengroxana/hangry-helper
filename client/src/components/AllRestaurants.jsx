@@ -23,7 +23,9 @@ class AllRestaurants extends Component {
     render() {
         return(
             <div>
-<h3>Restaurants</h3>
+<h2>Restaurants</h2>
+          <div className="add-link"><Link to="/new/restaurants">Add Restaurant</Link></div>
+<br/>
 <div className="food-list">
 {this.state.restaurants.map(restaurant => (
   <React.Fragment key={restaurant.id}>
