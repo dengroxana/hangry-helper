@@ -9,7 +9,7 @@ function Header(props) {
       <div className="fixed">
       <div className="header">
           <div className="logo-back">
-            <div class="text">
+            <div className="text">
         <Link to="/">
           <h2 className="header-logo">Hangry Helper</h2>
         </Link>
