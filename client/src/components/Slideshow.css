@@ -1,0 +1,41 @@
+/* .food {
+    width: 400px;
+    height: auto;
+} */
+
+.food-gallery {
+    
+    display: flex;
+    height: 200px;
+    max-width: 800px;
+    margin: 0 auto;
+    /* position: relative; */
+    overflow: hidden;
+    /* transform: translate3d(0, 0, 0); */ 
+    
+}
+
+/* .food-gallery > div {
+    height: 200px;
+    width: 2526px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+} */
+.food-pics{
+    height:200px;
+   
+    overflow-y: hidden;
+    animation: moveSlideshow 12s linear infinite;
+    
+      
+
+}
+
+@keyframes moveSlideshow {
+    100% { 
+        transform: translateX(-66.6666%); 
+    }
+  }

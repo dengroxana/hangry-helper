@@ -1,6 +1,5 @@
 import React from "react";
 import "./Header.css";
-// import logo from "../images/brand.png"
 import { Link } from "react-router-dom";
 
 function Header(props) {
