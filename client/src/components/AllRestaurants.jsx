@@ -30,7 +30,7 @@ class AllRestaurants extends Component {
 {this.state.restaurants.map(restaurant => (
   <React.Fragment key={restaurant.id}>
     <p className="res-list">
-    <Link to={`/restaurants/${restaurant.restaurant_name}`}>{restaurant.restaurant_name}</Link></p>
+    <Link to={`/restaurants/${restaurant.id}`}>{restaurant.restaurant_name}</Link></p>
 <p>{restaurant.location}</p>
 <p>Price Range: {restaurant.price_range}</p>
    

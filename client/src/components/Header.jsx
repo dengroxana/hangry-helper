@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 function Header(props) {
   return (
     <header>
+      <div>
+      <div className="fixed">
       <div className="header">
           <div className="logo-back">
             <div class="text">
@@ -17,7 +19,7 @@ function Header(props) {
         <div className="auth">
           {props.currentUser ? (
             <>
-              <p>You're logged in as: {props.currentUser.first_name || props.currentUser.email}</p>
+              <p>Welcome back, {props.currentUser.first_name || props.currentUser.email}!</p>
               <button onClick={props.handleLogout}>Logout</button>
             </>
           ) : (
@@ -35,6 +37,8 @@ function Header(props) {
         
         </>
       )}
+      </div>
+      </div>
     </header>
   );
 }

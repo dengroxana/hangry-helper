@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 export default class EditPage extends Component {
   state = {
     restaurant_name: "",
-    price_range: "",
-    location:""
+    // price_range: "",
+    // location:""
   }
 
   handleChange = (e) => {
