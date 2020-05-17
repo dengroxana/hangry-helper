@@ -1,0 +1,63 @@
+.food-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.food {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    margin: 75px;
+    flex: 1;
+    border: 10px solid white;
+    border-bottom: 40px solid white;
+    box-shadow: 5px 5px 5px gray;
+    
+    
+}
+.food-pics {
+}
+
+.img1 {
+    background-color: transparent;
+    transform: rotate(-5deg);
+
+
+}
+
+.img2 {
+    background-color: transparent;
+    transform: rotate(10deg);
+}
+.img3 {
+    background-color: transparent;
+    transform: rotate(-2deg);
+}
+.img4 {
+    background-color: transparent;
+    transform: rotate(7deg);
+}
+.img5 {
+    background-color: transparent;
+    transform: rotate(-2deg);
+}
+.img6 {
+    background-color: transparent;
+    transform: rotate(4deg);
+}
+.img7 {
+    background-color: transparent;
+    transform: rotate(-8deg);
+}
+.img8 {
+    background-color: transparent;
+    transform: rotate(-2deg);
+}
+.img9 {
+    background-color: transparent;
+    transform: rotate(-5deg);
+}

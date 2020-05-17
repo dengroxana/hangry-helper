@@ -1,6 +1,5 @@
 import React from "react";
 import "./Header.css";
-// import logo from "../images/brand.png"
 import { Link } from "react-router-dom";
 
 function Header(props) {
@@ -10,7 +9,7 @@ function Header(props) {
       <div className="fixed">
       <div className="header">
           <div className="logo-back">
-            <div class="text">
+            <div className="text">
         <Link to="/">
           <h2 className="header-logo">Hangry Helper</h2>
         </Link>
