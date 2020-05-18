@@ -90,7 +90,7 @@ export default class Main extends Component {
         />
         <Route
           exact
-          path="/categories"
+          path="/restaurants"
           render={(props) => (
             <AllRestaurants
               {...props}
