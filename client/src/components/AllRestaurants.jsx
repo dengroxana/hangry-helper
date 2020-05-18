@@ -24,7 +24,7 @@ class AllRestaurants extends Component {
         return(
             <div>
 <h2>Restaurants</h2>
-          <div className="add-link"><Link to="/new/restaurants">Add Restaurant</Link></div>
+          <div className="add-link"></div>
 <br/>
 <div>
 {this.state.restaurants.map(restaurant => (

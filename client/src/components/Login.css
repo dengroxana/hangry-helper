@@ -21,3 +21,16 @@ h3 {
  box-shadow: 5px 5px 5px gray;
 
 }
+
+@media only screen and (max-width: 415px) {
+.login-form {
+    width: 325px;
+    height: 415px;
+}
+h3 {
+    font-size: 18px;
+}
+ h2 {
+     font-size: 24px;
+ }   
+    }

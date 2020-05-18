@@ -21,8 +21,11 @@ function Header(props) {
               <p>Welcome back, {props.currentUser.first_name || props.currentUser.email}!</p>
               <button onClick={props.handleLogout}>Logout</button>
             </>
-          ) : (
-            <Link to="/login">Login - Register</Link>
+          ) : (<div className="head-link">
+            <Link to="/login">Login</Link>
+            <br/>
+            <Link to="/register">Register</Link>
+            </div>
           )}
         </div>
       </div>
@@ -31,7 +34,7 @@ function Header(props) {
         <>
           <div className="auth">
             <Link to="/categories">Categories</Link>
-            <Link to="/restaurants">Restaurants</Link>
+            <Link to="/new/restaurants">Add Restaurant</Link>
           </div>
         
         </>
