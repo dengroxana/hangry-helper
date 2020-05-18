@@ -20,36 +20,36 @@ class AllCategories extends Component {
     this.setState({ categories });
   };
 
-  categoryHandler = () => {
-    const showRes = this.state.showAll;
-    this.setState({showAll : !showRes})
-  };
+  // categoryHandler = () => {
+  //   const showRes = this.state.showAll;
+  //   this.setState({showAll : !showRes})
+  // };
 
   render() {
-    if (this.state.showAll) {
-    return (
-      <div>
-      <div className="showCat">
+//     if (this.state.showAll) {
+//     return (
+//       <div>
+//       <div className="showCat">
   
-        <br />
+//         <br />
      
-        {this.state.categories.map((category) => (
+//         {this.state.categories.map((category) => (
 
-          <h3 className="catTitle"key={category.id}>
-            {category.category_name}
-          </h3>
-        ))}
+//           <h3 className="catTitle"key={category.id}>
+//             {category.category_name}
+//           </h3>
+//         ))}
       
-   </div>
-        <button onClick={this.categoryHandler} >Show Less</button>
-{this.state.showAll ? <AllRestaurants /> : null}
+//    </div>
+//         <button onClick={this.categoryHandler} >Show Less</button>
+// {this.state.showAll ? <AllRestaurants /> : null}
 
          
      
-      </div>
-    );
-      }
-      else {
+//       </div>
+//     );
+//       }
+//       else {
         return (
           <div>
           <div className="showCat">
@@ -61,13 +61,13 @@ class AllCategories extends Component {
         ))}
         
         </div>
-        <button onClick={this.categoryHandler} >Show More</button>
-{this.state.showAll ? <AllRestaurants /> : null}
+         
+         <Link to="/restaurants">Restaurant List</Link>
          
           </div>
         )
       }
-  }
+  // }
 }
 
 export default AllCategories;
