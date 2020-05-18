@@ -6,7 +6,6 @@ import {
   
 } from "../services/api-helper";
 import "../App.css"
-import AllRestaurants from "./AllRestaurants";
 
 class AllCategories extends Component {
   state = { categories: [], showAll: false };
