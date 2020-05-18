@@ -90,7 +90,7 @@ export default class Main extends Component {
         />
         <Route
           exact
-          path="/restaurants"
+          path="/categories"
           render={(props) => (
             <AllRestaurants
               {...props}
@@ -123,14 +123,7 @@ export default class Main extends Component {
             );
           }}
         />
-        {/* <Route exact path='/restuarants/:id' render={(props) => {
-          const { id } = props.match.params
-          return <SingleRes
-            id={id}
-            categories={this.state.categories}
-          />
-        }
-        } /> */}
+     
       </main>
     );
   }
