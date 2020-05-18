@@ -5,22 +5,14 @@ header {
     padding-bottom: 20px;
     margin-bottom: 50px;
     border-bottom: 1px solid black;
-    /* margin-top: 265px; */
+ 
     
     
   }
-  .fixed {
-    /* border-right: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    box-shadow: 5px 5px 5px gray; */
-    /* overflow: hidden;
+  .head-link {
+    text-align: left;
+  }
 
-  position: fixed; 
-  top: 0; 
-  width: 90%;  */
-  
-}
 .auth {
     display: flex;
     align-items: baseline;
@@ -85,4 +77,15 @@ animation-iteration-count: infinite;
     background-repeat: no-repeat;
     height: 178px;
     width: 499px;
+}
+
+@media only screen and (max-width: 415px) {
+.logo-back {
+  width: 250px;
+  background-size: contain;
+}
+.header-logo {
+  font-size: 30px;
+}
+
 }
