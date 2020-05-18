@@ -39,7 +39,7 @@ export default class EditPage extends Component {
       <form onSubmit={(e) => {
         e.preventDefault();
         this.props.handleResUpdate(this.props.id, this.state);
-        this.props.history.push('/restaurants');
+        this.props.history.push('/categories');
       }}>
         <h2>Update Restaurant</h2>
         <div className="login-form">
