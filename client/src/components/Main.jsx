@@ -92,12 +92,14 @@ export default class Main extends Component {
           exact
           path="/restaurants"
           render={(props) => (
+            
             <AllRestaurants
               {...props}
               handleResDelete={this.handleResDelete}
               restaurants={this.state.restaurants}
             />
-          )}
+         
+            )}
         />
         <Route
           path="/new/restaurants"
