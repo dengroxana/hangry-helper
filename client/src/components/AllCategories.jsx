@@ -1,72 +1,56 @@
-import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
-import {
-  getAllCategories,
-  // getAllRestaurants,
-  
-} from "../services/api-helper";
-import "../App.css"
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "../App.css";
+import Latin from "./Latin";
+import European from "./European";
+import MiddleEastern from "./MiddleEastern";
+import Asian from "./Asian";
+import American from "./American";
+import Desserts from "./Desserts";
 
-class AllCategories extends Component {
-  state = { categories: [], showAll: false };
+function AllCategories() {
+  const [selectedTab, setSelectedTab] = useState(null);
 
-  componentDidMount() {
-    this.readAllCategories();
-   
-  }
-  readAllCategories = async () => {
-    const categories = await getAllCategories();
-    this.setState({ categories });
+  const TABS = {
+    asian: <Asian />,
+    latin: <Latin />,
+    european: <European />,
+    american: <American />,
+    "middle eastern": <MiddleEastern />,
+    desserts: <Desserts />,
   };
 
-  // categoryHandler = () => {
-  //   const showRes = this.state.showAll;
-  //   this.setState({showAll : !showRes})
-  // };
-
-  render() {
-//     if (this.state.showAll) {
-//     return (
-//       <div>
-//       <div className="showCat">
-  
-//         <br />
+ 
+    return (
+      <div>
      
-//         {this.state.categories.map((category) => (
-
-//           <h3 className="catTitle"key={category.id}>
-//             {category.category_name}
-//           </h3>
-//         ))}
-      
-//    </div>
-//         <button onClick={this.categoryHandler} >Show Less</button>
-// {this.state.showAll ? <AllRestaurants /> : null}
-
-         
-     
-//       </div>
-//     );
-//       }
-//       else {
-        return (
-          <div>
-          <div className="showCat">
-           
-            {this.state.categories.map((category) => (
-          <h3 className="catTitle"key={category.id}>
-            {category.category_name}
+        <div className="showCat">
+          <h3 className="catTitle" onClick={() => setSelectedTab('asian')}>
+            Asian
           </h3>
-        ))}
-        
+          <h3 className="catTitle" onClick={() => setSelectedTab('latin')}>
+            Latin
+          </h3>
+          <h3 className="catTitle" onClick={() => setSelectedTab('european')}>
+            European
+          </h3>
+          <h3 className="catTitle" onClick={() => setSelectedTab('american')}>
+            American
+          </h3>
+          <h3 className="catTitle" onClick={() => setSelectedTab('middle eastern')}>
+            Middle Eastern
+          </h3>
+          <h3 className="catTitle" onClick={() => setSelectedTab('desserts')}>
+            Desserts
+          </h3>
         </div>
-         
-         <Link to="/restaurants">Restaurant List</Link>
-         
-          </div>
-        )
-      }
-  // }
+        {TABS[selectedTab]}
+<br/>
+        <Link to="/restaurants">Edit Restaurant List</Link>
+      </div>
+    );
+  
+
 }
 
 export default AllCategories;
