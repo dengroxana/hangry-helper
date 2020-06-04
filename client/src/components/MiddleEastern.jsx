@@ -16,7 +16,7 @@ export default class MiddleEastern extends Component {
     return (
       <div>
         {this.state.restaurants.map((restaurant) => (
-          <p key={restaurant.id}>{restaurant.category_id === 35 && restaurant.restaurant_name}</p>
+          <p key={restaurant.id}>{restaurant.category_id === 17 && restaurant.restaurant_name}</p>
         ))}
       </div>
     );
