@@ -16,7 +16,7 @@ export default class American extends Component {
     return (
       <div>
         {this.state.restaurants.map((restaurant) => (
-          <p key={restaurant.id}>{restaurant.category_id === 34 && restaurant.restaurant_name}</p>
+          <p key={restaurant.id}>{restaurant.category_id === 16 && restaurant.restaurant_name}</p>
         ))}
       </div>
     );
